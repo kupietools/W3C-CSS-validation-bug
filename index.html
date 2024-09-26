@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Validator bug example</title><link style="script" href="style.css" rel="">
+</head>
+<body>
+<b>this is a bold line</b>
+This is a <span class="greentext">green text</span>.
+<p>
+The attached (buggy) stylesheet contains:
+<pre>
+
+b {text-decoration:underline;}
+
+/* .disabled-attribute{display:block;} */   %
+!
+)
+/* .another > .disabled > .attribute {box-shadow: 10px 10px 20px RGBA(255,255,255,0);border:1px solid hsla(0,0%,100%,.2) !important;} */   
+
+span.greentext {color:green;} /* dummy because theme bug is removing first A rule for some reason */
+</pre>
+
+</body>
+</html>
