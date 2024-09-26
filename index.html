@@ -19,6 +19,13 @@ b {text-decoration:underline;}
 
 span.greentext {color:green;} /* dummy because theme bug is removing first A rule for some reason */
 </pre>
+	
+The URL of the raw CSS file in the repo is <a href="https://raw.githubusercontent.com/kupietools/W3C-CSS-validation-bug/refs/heads/main/style.css">https://raw.githubusercontent.com/kupietools/W3C-CSS-validation-bug/refs/heads/main/style.css</a>. This can be retrieved live by the W3C CSS Validator at <a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fkupietools%2FW3C-CSS-validation-bug%40latest%2Fstyle.css&profile=css3svg&usermedium=all&warning=2&vextwarning=&lang=en">https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fkupietools%2FW3C-CSS-validation-bug%40latest%2Fstyle.css&profile=css3svg&usermedium=all&warning=2&vextwarning=&lang=en</a>. (That jsdelivr.net link serves it with the proper <code>text/css</code> MIME type so the validator can read the file. The raw file in github is only served as <code>text/plain</code>, which the W3C validator can't read.
+
+The W3C Validator results at that link shows the CSS is valid. However, it stops validating at the error and does not validate the <code>span.greentext</code> rule.
+
+However, the .greentext span does not work in Firefox 130 or Chrome 129 (current versions as of this writing on 2024-sep-26 because the CSS is invalid, due to the invalid characters in the lines before it. If you look at the <code>span</code> element in your browser's inspector, you'll see the .greentext rule doesn't exist at all as far as the browser is concerned. 
+
 
 </body>
 </html>
